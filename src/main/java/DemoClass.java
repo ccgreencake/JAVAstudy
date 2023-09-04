@@ -10,5 +10,6 @@ public class DemoClass {
     public static void main(String[] args) throws IOException {
         Student student = new Student("abc", '男', 18, 123456789, 100, 80, 90);
         System.out.println(student.toString());
+        System.out.println(student.age);
     }
 }
