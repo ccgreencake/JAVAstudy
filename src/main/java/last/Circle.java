@@ -1,3 +1,5 @@
+package last;
+
 /**
  * Created by IntelliJ IDEA.
  *

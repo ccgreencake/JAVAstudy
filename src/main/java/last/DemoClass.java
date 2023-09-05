@@ -1,6 +1,6 @@
+package last;
+
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * 这是一个示例类，用于展示文档注释的使用。

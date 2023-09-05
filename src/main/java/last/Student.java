@@ -1,3 +1,5 @@
+package last;
+
 /**
  * Created by IntelliJ IDEA.
  *
@@ -34,7 +36,7 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "last.Student{" +
                 "number=" + number +
                 ", math=" + math +
                 ", english=" + english +

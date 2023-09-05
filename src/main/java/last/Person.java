@@ -1,3 +1,5 @@
+package last;
+
 /**
  * Created by IntelliJ IDEA.
  *
@@ -17,7 +19,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "last.Person{" +
                 "name='" + name + '\'' +
                 ", sex=" + sex +
                 ", age=" + age +
