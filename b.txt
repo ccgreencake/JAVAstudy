@@ -1,0 +1,10 @@
+Student{id=210512, chinese=92, math=99, english=96, total=287}
+Student{id=210519, chinese=94, math=92, english=95, total=281}
+Student{id=210534, chinese=99, math=76, english=98, total=273}
+Student{id=210545, chinese=86, math=91, english=87, total=264}
+Student{id=210555, chinese=81, math=94, english=84, total=259}
+Student{id=210504, chinese=66, math=97, english=95, total=258}
+Student{id=210518, chinese=66, math=95, english=94, total=255}
+Student{id=210526, chinese=80, math=82, english=92, total=254}
+Student{id=210513, chinese=82, math=89, english=79, total=250}
+Student{id=210552, chinese=92, math=82, english=74, total=248}
