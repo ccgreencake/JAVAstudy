@@ -29,13 +29,17 @@ public class Test1 {
 //
 //2.写两个线程，一个线程打印 1~52，另一个线程打印字母A-Z打印顺序为12A34B56C⋯⋯51Y52Z（2个数字 1个字母）。
 
+        Thread_number threadNumber = new Thread_number();
+        Thread_word threadWord = new Thread_word();
+        threadNumber.start();
+        threadWord.start();
 
 
 
 
 
-//
-//3.利用多线程求解某范围质数,每个线程负责 1000范围：线程1找1-1000；线程 2 找 1001-2000；线程 3 找 2001-3000。编程程序将计算质数的总个数。
+
+
     }
     static class MyRunnable implements Runnable{
         int n = 1;
@@ -44,6 +48,41 @@ public class Test1 {
             for (int i = 0; i < 10; i++) {
                 System.out.println(Thread.currentThread().getName()+":"+n);
                 n++;
+            }
+        }
+    }
+    static class Thread_number extends Thread{
+        @Override
+        public void run() {
+            synchronized (Demo.class) {
+                for (int i = 1; i < 53; i++) {
+                    System.out.print(i);
+                    if (i % 2 == 0) {
+                        try {
+                            Demo.class.wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    Demo.class.notify();
+                }
+            }
+        }
+    }
+    static class Thread_word extends Thread{
+        @Override
+        public void run() {
+            synchronized (Demo.class) {
+                for (int i = 65; i < 91; i++) {
+                    System.out.print((char) i);
+                    Demo.class.notify();
+                    try {
+                        Demo.class.wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
             }
         }
     }
